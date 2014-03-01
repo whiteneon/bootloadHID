@@ -76,7 +76,7 @@ fuse:
 	$(AVRDUDE) -U hfuse:w:$(FUSEH):m -U lfuse:w:$(FUSEL):m
 
 lock:
-	$(AVRDUDE) -U lock:w:0x3f:m
+	$(AVRDUDE) -U lock:w:0x2f:m
 
 read_fuses:
 	$(UISP) --rd_fuses
