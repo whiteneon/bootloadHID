@@ -85,6 +85,8 @@ static void leaveBootloader()
 {
     DBG1(0x01, 0, 0);
     cli();
+	usbDeviceDisconnect();
+    bootLoaderExit();
     boot_rww_enable();
     USB_INTR_ENABLE = 0;
     USB_INTR_CFG = 0;       /* also reset config bits */
